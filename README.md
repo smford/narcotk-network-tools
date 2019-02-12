@@ -9,11 +9,15 @@
 ## Compiling
 
 Linux:
+
 `GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o assets/reverselookup-linux-x86_64 reverselookup.go`
 
 
-Raspberry Pi
+Raspberry Pi:
+
 `GOOS=linux GOARCH=arm GOARM=5 go build -ldflags "-s -w" -o assets/reverselookup-rpi-arm5 reverselookup.go`
 
-OSX
+
+OSX:
+
 `GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o assets/reverselookup-osx-amd64 reverselookup.go`
