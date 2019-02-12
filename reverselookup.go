@@ -41,7 +41,7 @@ func ValidIP(ip string) bool {
 
 func displayHelp() {
 	helpmessage := `
-reverseip [ip address]
+reverselookup [ip address]
 `
 	fmt.Println(helpmessage)
 }
