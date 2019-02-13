@@ -42,4 +42,10 @@ func main() {
 
 	fmt.Println(viper.AllSettings())
 	fmt.Println(viper.GetString("something"))
+	fmt.Println(cleanmac("deAdBeEfCAfe"))
+}
+
+func cleanmac(mac string) string {
+	fmt.Println("cleaning mac:", mac)
+	return mac
 }
