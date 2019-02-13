@@ -2,9 +2,10 @@
 
 | Tool | Use | Example |
 | :--- | :--- | :--- |
+| dnslookup | | |
 | forwardlookup | find IPs (ipv4 & ipv6) for a given hostname | `./forwardlookup google.com` |
 | reverselookup | find hostname for a given IP address | `./reverselookup 8.8.8.8` |
-
+| wol | | |
 
 ## Compiling
 
