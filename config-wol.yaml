@@ -1,0 +1,4 @@
+something: somethingtext
+Hosts:
+  tv: deadbeefcafe
+  rpi: deadbeefcaff
