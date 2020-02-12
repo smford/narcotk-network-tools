@@ -1,7 +1,5 @@
 package main
 
-// https://www.ipify.org
-
 import (
 	"flag"
 	"fmt"
@@ -26,6 +24,12 @@ func init() {
 	pflag.CommandLine.AddGoFlagSet(flag.CommandLine)
 	pflag.Parse()
 	viper.BindPFlags(pflag.CommandLine)
+
+	if !validateipprovider(viper.GetString("provider")) {
+		fmt.Printf("--provider %s is not a valid provider\n", viper.GetString("provider"))
+		os.Exit(1)
+	}
+
 }
 
 func main() {
@@ -54,4 +58,20 @@ func getIP(ipprovider string) string {
 	}
 
 	return returnip
+}
+
+func validateipprovider(ipname string) bool {
+	ipname = strings.ToLower(ipname)
+
+	if ipname == "all" {
+		return true
+	}
+
+	for k := range ipproviderlist {
+		if k == ipname {
+			return true
+		}
+	}
+
+	return false
 }
